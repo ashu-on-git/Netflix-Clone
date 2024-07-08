@@ -1,432 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netflix Clone</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0 0 7px 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      }
-      body{
-        background-color: #252525;
-      }
-      .body-1 {
-        background-image: url("background-image.jpg");
-        width: 100vw;
-        min-height: 700px;
-      }
-      
-      .navbar {
-        display: flex;
-        justify-content: space-around;
-      }
-      .nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        list-style: none;
-      }
-      .logo {
-        width: 18vw;
-      }
-      .btn-1 {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        border: 0.1px solid white;
-        background-color: #090909c6;
-        color: white;
-        gap: 4px;
-        padding: 1px 7px;
-        height: 29px;
-        border-radius: 4px;
-      }
-      .btn-1 .inlog {
-        color: white;
-      }
-      .btn-2 {
-        height: 30px;
-        width: 80px;
-        border-style: none;
-        background-color: red;
-        color: white;
-        border-radius: 4px;
-      }
-      .content-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        gap: 15px;
-        margin: 150px 0 20px 0;
-      }
-      .content-1 .catch{
-        font-size: 48px;
-        font-weight: 1000;
-      }
-      .content-1 .para1{
-        font-size: 25px;
-      }
-      .content-1 .para2{
-        font-size: 20px;
-      }
 
-      .email{
-        border: 0.1px solid white;
-        background-color: #090909c6;
-        color: white;
-        height: 35px;
-        width: 350px;
-        border-radius: 4px;
-        padding: 10px;
-      }
-      .btn-3{
-        display: inline-flex;
-        justify-content: space-evenly;
-        align-items: center;
-        border-style: none;
-        background-color: red;
-        color: white;
-        /* gap: 4px; */
-        /* padding: 1px 7px; */
-        font-size: 25px;
-        font-weight: 500;
-        height: 55px;
-        width: 200px;
-        border-radius: 4px;
-        margin: 0;
-      }
-      .btn-3 svg{
-        margin: 0;
-      }
-      .cta input{
-        margin: 0;
-      }
-      .cta{
-        display: flex;
-        justify-self: center;
-        align-items: center;
-        gap: 8px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-      .body-2{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        background-color: black;
-        height: 490px;
-        width: 100vw;
-      }
-      .body-2 .content-2{
-        color: white;
-        margin: 0 0 0 150px;
-      }
-      .body-2 .content-2 .para1{
-        font-size: 48px;
-        font-weight: 1000;
-      }
-      .body-2 .content-2 .para2{
-        font-size: 25px;
-      }
-      .body-2 .tv{
-        width: 450px;
-        margin: 0 150px 0 0;
-      }
-
-      .body-3{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        background-color: black;
-        height: 490px;
-        width: 100vw;
-      }
-      .body-3 .content-3{
-        color: white;
-        margin: 0 150px 0 0;
-      }
-      .body-3 .content-3 .para1{
-        font-size: 48px;
-        font-weight: 1000;
-      }
-      .body-3 .content-3 .para2{
-        font-size: 25px;
-      }
-      .body-3 .mobile{
-        width: 450px;
-        margin: 0 0 0 150px;
-      }
-
-      .body-4{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        background-color: black;
-        height: 490px;
-        width: 100vw;
-      }
-      .body-4 .content-4{
-        color: white;
-        margin: 0 0 0 150px;
-      }
-      .body-4 .content-4 .para1{
-        font-size: 48px;
-        font-weight: 1000;
-      }
-      .body-4 .content-4 .para2{
-        font-size: 25px;
-      }
-      .body-4 .devices{
-        width: 450px;
-        margin: 0 150px 0 0;
-      }
-
-      .body-5{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        background-color: black;
-        height: 490px;
-        width: 100vw;
-      }
-      .body-5 .content-5{
-        color: white;
-        margin: 0 150px 0 0;
-      }
-      .body-5 .content-5 .para1{
-        font-size: 48px;
-        font-weight: 1000;
-      }
-      .body-5 .content-5 .para5{
-        font-size: 25px;
-      }
-      .body-5 .sticker{
-        width: 450px;
-        margin: 0 0 0 150px;
-      }
-
-      .body-6{
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        flex-direction: column;
-        background-color: black;
-        height: 930px;
-        width: 100vw;
-        color: white;
-        gap: 20px;
-      }
-      .body-6 .content-6 .para1{
-        font-size: 48px;
-        font-weight: 1000;
-        text-align:end;
-      }
-      .body-6 .content-7 .para1{
-        font-size: 20px;
-      }
-      .body-6 .faq{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .body-6 .faq .item{
-        background-color: #252525;
-        width: 70vw;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 25px;
-        padding: 16.5px 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="body-1">
-      <div class="header">
-        <navbar class="navbar">
-          <img src="netfix-logo.png" alt="" class="logo" />
-          <ul class="nav">
-            <li class="item-1">
-              <button class="btn-1">
-                <svg
-                  class="inlog"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="16px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#5f6368"
-                >
-                  <path
-                    d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"
-                  /></svg
-                >English<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="20px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#5f6368"
-                >
-                  <path d="M480-360 280-560h400L480-360Z" />
-                </svg>
-              </button>
-            </li>
-            <li class="item-2">
-              <button class="btn-2">Sign In</button>
-            </li>
-          </ul>
-        </navbar>
-      </div>
-      <div class="content-1">
-        <p class="catch">Unlimited movies, TV shows and more</p>
-        <p class="para1">Watch anywhere. Cancel anytime.</p>
-        <p class="para2">
-            Ready to watch? Enter your email to create or restart your membership.
-        </p>
-        <div class="cta">
-          <input type="text" placeholder="Email address" class="email" />
-          <button class="btn-3">
-            Get Started<svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20px"
-              viewBox="0 -960 960 960"
-              width="20px"
-              fill="#5f6368"
-            >
-              <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="body-2">
-        <div class="content-2">
-            <p class="para1">Enjoy on your TV</p>
-            <p class="para2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
-        </div>
-        <img src="tv.png" alt="tv view" class="tv">
-    </div>
-
-    <div class="body-3">
-        <img src="mobile-view.jpg" alt="" class="mobile">
-        <div class="content-3">
-            <p class="para1">Download your shows to watch offline</p>
-            <p class="para2">Save your favourites easily and always have something to watch.</p>
-        </div>
-    </div>
-
-    <div class="body-4">
-        <div class="content-4">
-            <p class="para1">Watch everywhere</p>
-            <p class="para2">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
-        </div>
-        <img src="devices.png" alt="multi device view" class="devices">
-    </div>
-
-    <div class="body-5">
-        <img src="sticker.png" alt="sticker" class="sticker">
-        <div class="content-5">
-            <p class="para1">Create profiles for kids</p>
-            <p class="para2">Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
-        </div>
-    </div>
-
-    <div class="body-6">
-        <div class="content-6">
-            <p class="para1">Frequently Asked Questions</p>
-        </div>
-        <div class="faq">
-            <span class="item item-1">What is Netflix?
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            </span>
-            <span class="item item-2">How much does Netflix cost?
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            </span>
-            <span class="item item-3">Where can I watch?
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            </span>
-            <span class="item item-4">How do I cancel?
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            </span>
-            <span class="item item-5">What can I watch on Netflix?
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            </span>
-            <span class="item item-6">Is Netflix good for kids?
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-360 280-560h400L480-360Z"/></svg>
-            </span>
-        </div>
-        <div class="content-7">
-            <p class="para1">Ready to watch? Enter your email to create or restart your membership.</p>
-            <div class="cta">
-                <input type="text" placeholder="Email address" class="email" />
-                <button class="btn-3">
-                  Get Started<svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="20px"
-                    viewBox="0 -960 960 960"
-                    width="20px"
-                    fill="#5f6368"
-                  >
-                    <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
-                  </svg>
-                </button>
-              </div>
-        </div>
-    </div>
-    <div class="body-8">
-        <div class="content-8">
-           <div class="para1">Questions? Call 000-800-919-1694</div>
-           <div class="lists">
-            <ul class="items">
-                <li class="item"><a href="">FAQ</a></li>
-                <li class="item"><a href="">Investor Relations</a></li>
-                <li class="item"><a href="">Privacy</a></li>
-                <li class="item"><a href="">Speed Test</a></li>
-                <li class="item"><a href="">Help Centre</a></li>
-                <li class="item"><a href="">Jobs</a></li>
-                <li class="item"><a href="">Cookie Preferences</a></li>
-                <li class="item"><a href="">Legal Notices</a></li>
-                <li class="item"><a href="">Account</a></li>
-                <li class="item"><a href="">Ways to Watch</a></li>
-                <li class="item"><a href="">Corporate Information</a></li>
-                <li class="item"><a href="">Only on Netflix</a></li>
-                <li class="item"><a href="">Media Centre</a></li>
-                <li class="item"><a href="">Terms of Use</a></li>
-                <li class="item"><a href="">Contact Us</a></li>
-            </ul>
-           </div>
-           <div class="button">
+<body>
+  <div class="body-1">
+    <div class="header">
+      <navbar class="navbar">
+        <img src="netfix-logo.png" alt="" class="logo" />
+        <ul class="nav">
+          <li class="item-1">
             <button class="btn-1">
-                <svg
-                  class="inlog"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="16px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#5f6368"
-                >
-                  <path
-                    d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"
-                  /></svg
-                >English<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="20px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#5f6368"
-                >
-                  <path d="M480-360 280-560h400L480-360Z" />
-                </svg>
-              </button>
-           </div>
-           <div class="footer">Netflix India</div>
+              <svg class="inlog" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"
+                fill="#5f6368">
+                <path
+                  d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+              </svg>English<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px"
+                fill="#5f6368">
+                <path d="M480-360 280-560h400L480-360Z" />
+              </svg>
+            </button>
+          </li>
+          <li class="item-2">
+            <button class="btn-2">Sign In</button>
+          </li>
+        </ul>
+      </navbar>
     </div>
-  </body>
+    <div class="content-1">
+      <p class="catch">Unlimited movies, TV shows and more</p>
+      <p class="para1">Watch anywhere. Cancel anytime.</p>
+      <p class="para2">
+        Ready to watch? Enter your email to create or restart your membership.
+      </p>
+      <div class="cta">
+        <input type="text" placeholder="Email address" class="email" />
+        <button class="btn-3">
+          Get Started<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+            fill="#5f6368">
+            <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-2">
+    <div class="content-2">
+      <p class="para1">Enjoy on your TV</p>
+      <p class="para2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+    </div>
+    <div class="video">
+      <img src="tv.png" alt="tv view" class="tv">
+      <video src="video-tv.m4v" autoplay loop muted class="video1"></video>
+    </div>
+  </div>
+
+  <div class="body-3">
+    <img src="mobile-view.jpg" alt="" class="mobile">
+    <div class="content-3">
+      <p class="para1">Download your shows to watch offline</p>
+      <p class="para2">Save your favourites easily and always have something to watch.</p>
+    </div>
+  </div>
+
+  <div class="body-4">
+    <div class="content-4">
+      <p class="para1">Watch everywhere</p>
+      <p class="para2">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+    </div>
+    <div class="video">
+      <img src="devices.png" alt="multi device view" class="devices">
+      <video src="video-devices.m4v" autoplay muted loop class="video2"></video>
+    </div>
+  </div>
+
+  <div class="body-5">
+    <img src="sticker.png" alt="sticker" class="sticker">
+    <div class="content-5">
+      <p class="para1">Create profiles for kids</p>
+      <p class="para2">Send children on adventures with their favourite characters in a space made just for them—free
+        with your membership.</p>
+    </div>
+  </div>
+
+  <div class="body-6">
+    <div class="content-6">
+      <p class="para1">Frequently Asked Questions</p>
+    </div>
+    <div class="faq">
+      <span class="item item-1">What is Netflix?
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M480-360 280-560h400L480-360Z" />
+        </svg>
+      </span>
+      <span class="item item-2">How much does Netflix cost?
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M480-360 280-560h400L480-360Z" />
+        </svg>
+      </span>
+      <span class="item item-3">Where can I watch?
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M480-360 280-560h400L480-360Z" />
+        </svg>
+      </span>
+      <span class="item item-4">How do I cancel?
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M480-360 280-560h400L480-360Z" />
+        </svg>
+      </span>
+      <span class="item item-5">What can I watch on Netflix?
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M480-360 280-560h400L480-360Z" />
+        </svg>
+      </span>
+      <span class="item item-6">Is Netflix good for kids?
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+          <path d="M480-360 280-560h400L480-360Z" />
+        </svg>
+      </span>
+    </div>
+    <div class="content-7">
+      <p class="para1">Ready to watch? Enter your email to create or restart your membership.</p>
+      <div class="cta">
+        <input type="text" placeholder="Email address" class="email" />
+        <button class="btn-3">
+          Get Started<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+            fill="#5f6368">
+            <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="body-8">
+    <div class="content-8">
+      <div class="para1">Questions? Call 000-800-919-1694</div>
+      <div class="lists">
+        <ul class="items">
+          <li class="item"><a href="">FAQ</a></li>
+          <li class="item"><a href="">Help Centre</a></li>
+          <li class="item"><a href="">Account</a></li>
+          <li class="item"><a href="">Media Centre</a></li>
+          <li class="item"><a href="">Investor Relations</a></li>
+          <li class="item"><a href="">Jobs</a></li>
+          <li class="item"><a href="">Ways to Watch</a></li>
+          <li class="item"><a href="">Terms of Use</a></li>
+          <li class="item"><a href="">Privacy</a></li>
+          <li class="item"><a href="">Cookie Preferences</a></li>
+          <li class="item"><a href="">Corporate Information</a></li>
+          <li class="item"><a href="">Contact Us</a></li>
+          <li class="item"><a href="">Speed Test</a></li>
+          <li class="item"><a href="">Legal Notices</a></li>
+          <li class="item"><a href="">Only on Netflix</a></li>
+        </ul>
+      </div>
+      <div class="button">
+        <button class="btn-1">
+          <svg class="inlog" xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"
+            fill="#5f6368">
+            <path
+              d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+          </svg>English<svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px"
+            fill="#5f6368">
+            <path d="M480-360 280-560h400L480-360Z" />
+          </svg>
+        </button>
+      </div>
+      <div class="footer">Netflix India</div>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0 0 7px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #252525;
+}
+
+.body-1 {
+    background-image: url("background-image.jpg");
+    width: 100vw;
+    min-height: 700px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.logo {
+    width: 15vw;
+}
+
+.btn-1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.1px solid white;
+    background-color: #090909c6;
+    color: white;
+    gap: 4px;
+    padding: 1px 7px;
+    height: 29px;
+    border-radius: 4px;
+}
+
+.btn-1 .inlog {
+    color: white;
+}
+
+.btn-2 {
+    height: 30px;
+    width: 80px;
+    border-style: none;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+}
+
+.content-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 15px;
+    margin: 150px 0 20px 0;
+}
+
+.content-1 .catch {
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.content-1 .para1 {
+    font-size: 25px;
+}
+
+.content-1 .para2 {
+    font-size: 20px;
+}
+
+.email {
+    border: 0.1px solid white;
+    background-color: #090909c6;
+    color: white;
+    height: 35px;
+    width: 350px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.btn-3 {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-style: none;
+    background-color: red;
+    color: white;
+    /* gap: 4px; */
+    /* padding: 1px 7px; */
+    font-size: 25px;
+    font-weight: 500;
+    height: 55px;
+    width: 200px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.btn-3 svg {
+    margin: 0;
+}
+
+.cta input {
+    margin: 0;
+}
+
+.cta {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.body-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 490px;
+    width: 100vw;
+}
+
+.body-2 .content-2 {
+    color: white;
+    margin: 0 0 0 150px;
+}
+
+.body-2 .content-2 .para1 {
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.body-2 .content-2 .para2 {
+    font-size: 25px;
+}
+
+.body-2 .video {
+    position: relative;
+}
+
+.body-2 .video .tv {
+    width: 450px;
+    margin: 0 150px 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.body-2 .video .video1 {
+    width: 345px;
+    position: absolute;
+    top: 70px;
+    right: 195px;
+}
+
+
+.body-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 490px;
+    width: 100vw;
+}
+
+.body-3 .content-3 {
+    color: white;
+    margin: 0 150px 0 0;
+}
+
+.body-3 .content-3 .para1 {
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.body-3 .content-3 .para2 {
+    font-size: 25px;
+}
+
+.body-3 .mobile {
+    width: 450px;
+    margin: 0 0 0 150px;
+}
+
+.body-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 490px;
+    width: 100vw;
+}
+
+.body-4 .content-4 {
+    color: white;
+    margin: 0 0 0 150px;
+}
+
+.body-4 .content-4 .para1 {
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.body-4 .content-4 .para2 {
+    font-size: 25px;
+}
+
+.body-4 .video {
+    position: relative;
+}
+
+.body-4 .video .devices {
+    width: 460px;
+    margin: 0 150px 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.body-4 .video .video2 {
+    width: 306px;
+    position: absolute;
+    right: 230px;
+    top: 30px;
+}
+
+.body-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 490px;
+    width: 100vw;
+}
+
+.body-5 .content-5 {
+    color: white;
+    margin: 0 150px 0 0;
+}
+
+.body-5 .content-5 .para1 {
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+.body-5 .content-5 .para5 {
+    font-size: 25px;
+}
+
+.body-5 .sticker {
+    width: 450px;
+    margin: 0 0 0 150px;
+}
+
+.body-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    height: 930px;
+    width: 100vw;
+    color: white;
+    gap: 20px;
+}
+
+.body-6 .content-6 .para1 {
+    font-size: 48px;
+    font-weight: 1000;
+    text-align: end;
+}
+
+.body-6 .content-7 .para1 {
+    font-size: 20px;
+}
+
+.body-6 .faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-6 .faq .item {
+    background-color: #252525;
+    width: 70vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 16.5px 20px;
+}
+
+.body-8 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    background-color: black;
+    height: 450px;
+    width: 100vw;
+    color: white;
+    gap: 20px;
+}
+
+.content-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: 35px;
+    color: rgb(198, 198, 198);
+    gap: 10px;
+}
+
+.body-8 .content-8 .lists .items {
+    display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: start;
+    list-style: none;
+}
+
+.body-8 .content-8 .lists .items .item {
+    padding: 3px;
+    font-size: 14px;
+    font-weight: 450;
+}
+
+.body-8 .content-8 .lists .items .item a {
+    color: rgb(198, 198, 198);
+}
+
+.footer {
+    font-size: 13px;
+}
